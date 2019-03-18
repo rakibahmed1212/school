@@ -1,0 +1,1 @@
+CREATE VIEW sub_withclass AS SELECT subject_list.id,subject_list.subject_name,class_list.class_name FROM class_list,subject_list WHERE class_list.id=subject_list.class_id;

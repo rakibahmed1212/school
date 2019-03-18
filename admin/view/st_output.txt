@@ -1,0 +1,6 @@
+CREATE VIEW st_output AS SELECT 
+student_list.fname,student_list.lname,class_list.class_name,student_list.email,student_list.phone,student_list.nationality,student_list.gender,student_list.dob,
+divisions.name AS div_name,districts.name AS dist_name,upazilas.name AS thn_name,student_list.address,student_list.picture,gardian_table.name AS gname 
+FROM student_list,class_list,divisions,districts,upazilas,gardian_table WHERE 
+student_list.class_id=class_list.id AND student_list.division_id=divisions.id AND student_list.district_id=districts.id AND 
+student_list.thana_id=upazilas.id AND student_list.gardian_id=gardian_table.id;

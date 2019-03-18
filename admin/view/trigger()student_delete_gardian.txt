@@ -1,0 +1,7 @@
+CREATE TRIGGER student_delete_gardian    
+AFTER DELETE ON student_list     
+FOR EACH ROW     
+BEGIN
+DELETE FROM gardian_table 
+      WHERE 
+      OLD.gardian_id=gardian_table.id
